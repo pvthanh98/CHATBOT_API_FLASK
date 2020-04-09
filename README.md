@@ -3,6 +3,6 @@
 ## Usage
 - in terminal:
 `
-$ set flask_app=app.py
-$ flask.run
+>$ set flask_app=app.py
+>$ flask.run
 `

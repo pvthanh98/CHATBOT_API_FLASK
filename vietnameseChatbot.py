@@ -11,7 +11,7 @@ import random
 import json
 #import pickle
 
-with open("vi.json",'r', encoding='utf8') as file:
+with open("vi_2.json",'r', encoding='utf8') as file:
     data = json.load(file)
 # try:
 #     with open("data.pickle", "rb") as f:
@@ -77,10 +77,10 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 # try:
-model.load("model.tflearn")
+#model.load("model.tflearn")
 # except:
-# model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-# model.save("model.tflearn")
+model.fit(training, output, n_epoch=500, batch_size=8, show_metric=True)
+model.save("model.tflearn")
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
@@ -123,14 +123,15 @@ def message_response(sentence, charset='utf-8'):
     tag = labels[res_index]
     print("Tag:", tag)
     print(results)
-    if results[res_index] > 0.6:
+    print(results[res_index]);
+    if results[res_index] > 0.5:
         for tg in data["intents"]:
             if tg['tag'] == tag:
                 response = tg['responses']
         return random.choice(response)
 
     else: 
-        return "Bạn cứ nói tiếp chúng tao đang lắng nghe"
+        return "Bạn cứ nói tiếp chúng tôi đang lắng nghe"
 
     
 #chat()

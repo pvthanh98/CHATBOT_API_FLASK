@@ -24,6 +24,11 @@
      "responses": ["Chúng tôi hiện tại có 3 chi nhánh ở tp.HCM và tp.Hà Nội và tp.Cần Thơ", "Chi nhánh 1: 3/2 Ninh Kiều, Cần Thơ,<br>Chi nhánh 2: 120 Đống Đa, Hà Nội,<br>Chi nhánh 3: 99D Nguyễn Huệ, tp. HCM"],
      "context_set": ""
     },
+	{"tag": "thanks",
+     "patterns": ["Cám ơn", "thanks", "thank you","cám ơn nhé"],
+     "responses": ["Không có chi ^^","Hihi. Đó là nhiệm vụ của tôi mà."],
+     "context_set": ""
+    },
     {"tag": "passwordForgot",
      "patterns": ["Quên mật khẩu", "tôi bị mất mật khẩu", "Làm sao để lấy lại mật khẩu","tôi quên password","cách lấy lại password"],
      "responses": ["Bạn truy cập vào trang https://thanhphan.cf/ và làm theo hướng dẫn nhé", "Bạn vào trang đăng nhập và click vào tùy chọn quên mật khẩu"],
